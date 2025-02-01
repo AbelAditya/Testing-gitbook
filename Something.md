@@ -1,2 +1,2 @@
-## Somethign 
+## Something
 Something bs
