@@ -2,11 +2,11 @@
 
 ## 1. Introduction
 
-The text2video platform for educational content creation is designed to allow students and teachers to upload educational material and generate videos explaining relevant concepts based on textual prompts. This SRS document outlines the software requirements for the platform, including functional, non-functional, and performance requirements.
+The text2video platform for educational content creation is designed to allow students and teachers to upload educational material and generate videos explaining relevant concepts based on textual prompts. The platform will utilize machine learning-based prompting pipelines to improve the quality of the generated videos over time and allow users to choose from a selection of open-source text-to-video models. This SRS document outlines the software requirements for the platform, including functional, non-functional, and performance requirements.
 
 ## 2. System Overview
 
-The text2video platform will enable users to create, share, and discover educational content in a user-friendly and engaging format. The platform will utilize text-to-speech technology and pre-defined templates to generate videos based on user-provided textual prompts.
+The text2video platform will enable users to create, share, and discover educational content in a user-friendly and engaging format. The platform will utilize text-to-speech technology and pre-defined templates to generate videos based on user-provided textual prompts. The platform will also utilize machine learning-based prompting pipelines to improve the quality of the generated videos over time and allow users to choose from a selection of open-source text-to-video models.
 
 ## 3. Functional Requirements
 
@@ -27,15 +27,21 @@ The text2video platform will enable users to create, share, and discover educati
 * Users should be able to generate videos based on textual prompts.
 * The platform should utilize text-to-speech technology to convert text into spoken words.
 * Users should be able to choose from pre-defined video templates based on the content type.
+* Users should be able to select from a variety of open-source text-to-video models.
 * The generated videos should be saved in a user-accessible format, such as MP4.
 
-### 3.4 Collaboration
+### 3.4 Prompting Pipeline
+
+* The platform should utilize machine learning-based prompting pipelines to improve the quality of the generated videos over time.
+* The pipeline should analyze user feedback and improve the text-to-video models accordingly.
+
+### 3.5 Collaboration
 
 * Users should be able to invite other users to collaborate on their content.
 * Users should be able to assign roles and permissions to collaborators.
 * Users should be able to view the changes made by collaborators in real-time.
 
-### 3.5 Search and Discovery
+### 3.6 Search and Discovery
 
 * Users should be able to search for educational content based on keywords, subject, grade level, and other relevant criteria.
 * Users should be able to view recommended content based on their viewing history and preferences.
@@ -88,6 +94,7 @@ The text2video platform will enable users to create, share, and discover educati
 * The platform will utilize third-party text-to-speech technology and pre-defined video templates.
 * The platform will require a stable internet connection to upload and download content.
 * The platform will require users to have a compatible web browser or mobile device.
+* The platform will utilize machine learning-based prompting pipelines to improve the quality of the generated videos over time.
 
 ## 7. Glossary
 
@@ -96,12 +103,18 @@ The text2video platform will enable users to create, share, and discover educati
 * Collaborator: A user who is invited to collaborate on a piece of content.
 * Video Generation: The process of converting textual prompts into videos.
 * Search and Discovery: The process of finding and viewing educational content on the platform.
+* Prompting Pipeline: A machine learning-based system that utilizes user feedback to improve the quality of the generated videos over time.
 
-## 8. System Architecture
+## 8. System Architecture (Updated)
 
 The text2video platform will be built using a microservices architecture, with separate services for user management, content management, video generation, collaboration, and search and discovery. The platform will be deployed on a cloud infrastructure, such as AWS or Google Cloud, to ensure scalability and high availability.
 
 The platform will utilize a relational database, such as MySQL or PostgreSQL, to store user and content data. The video generation service will utilize text-to-speech technology and pre-defined video templates to generate videos based on user-provided textual prompts.
+
+In addition to the core services, the platform will also include the following components:
+
+* **Prompting Pipeline**: The platform will utilize a machine learning-based prompting pipeline to improve the quality of the generated videos over time. The pipeline will analyze user feedback and improve the text-to-video models accordingly.
+* **Model Selection**: The platform will allow users to choose from a selection of open-source text-to-video models. Users will be able to choose the model that best fits their needs and preferences.
 
 The platform will be accessible through a web interface and a mobile application, with support for both iOS and Android devices. The web interface will be built using modern web technologies, such as React or Angular, while the mobile application will be built using native technologies, such as Swift or Kotlin.
 
@@ -115,6 +128,8 @@ The text2video platform will be considered ready for production when it meets th
 * The platform is able to handle content uploads of up to 1 GB in size in under 5 minutes.
 * The platform is secure and compliant with relevant data privacy regulations.
 * The platform is user-friendly and accessible to users with disabilities.
+* The prompting pipeline is able to improve the quality of the generated videos over time.
+* The platform allows users to choose from a selection of open-source text-to-video models.
 
 ## 10. Future Enhancements
 
