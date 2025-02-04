@@ -1,5 +1,3 @@
-Thank you for your request. Here is aSoftware Requirements Specification (SRS) document for your text2video platform for students and teachers:
-
 ## Introduction
 
 The text2video platform is a web-based application that allows students and teachers to upload academic material and generate videos based on free-text prompts. The platform will support a variety of academic file formats, including PDF, PPT, Word, Docx, and txt. The platform will also include guardrails on the content being generated to ensure that it is appropriate and relevant for academic use.
