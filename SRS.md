@@ -67,5 +67,3 @@ The text2video platform will be considered complete when it meets the following 
 * The platform includes a moderation or review process for generated content.
 * The platform includes a user-friendly interface that is easy to navigate and use.
 * The platform meets all technical requirements and dependencies.
-
-I hope this SRS document meets your needs. Let me know if you have any questions or if there are any additional details you would like me to include.
