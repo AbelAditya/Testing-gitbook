@@ -1,42 +1,71 @@
-**Software Requirements Specification (SRS) for Text2Video Platform**
+# Software Requirements Specification (SRS) for Text2Video Platform
 
-**1. Introduction**
+## Introduction
 
-The Text2Video platform is a web-based application that allows students and teachers to upload academic material in various formats and generate videos based on free-text prompts. The platform will support PDF, PPT, DOCX, and TXT file formats for academic material uploads and enforce content guardrails for generated videos.
+The Text2Video platform is a web-based application that allows students and teachers to upload academic materials in PDF, PPT, DOCX, and TXT formats, and generate videos based on free-text prompts. The platform will include guardrails on the content being generated to ensure appropriateness.
 
-**2. Functional Requirements**
+## Functional Requirements
 
-2.1. **File Upload**
+### User Management
 
-* The platform should support file uploads in the following formats: PDF, PPT, DOCX, and TXT.
-* The platform should provide an omni uploader that can handle multiple file formats and provide progress indicators during file uploads.
-* The omni uploader should support drag-and-drop functionality.
+* Users should be able to create an account and log in to the platform.
+* Users should be able to edit their account information, including their name, email address, and password.
+* Users should be able to delete their account.
 
-2.2. **Text Prompts**
+### Academic Material Upload
 
-* Users should be able to enter free-text prompts without any specific character limits or constraints.
-* The platform should enforce content guardrails to ensure that generated videos are appropriate, accurate, and adhere to community standards.
+* Users should be able to upload academic materials in PDF, PPT, DOCX, and TXT formats.
+* The platform should include an omni uploader that can handle these file formats and extract information from them.
 
-2.3. **Video Generation**
+### Text Prompt Entry
 
-* The platform should extract relevant information from uploaded files for video generation.
-* The platform should support different types of content, such as images, tables, and equations.
-* The platform should provide feedback or notifications to users during the video generation process, such as estimated completion times or progress bars.
-* The platform should enforce content guardrails for generated videos, including automated filters, manual review processes, or user reporting mechanisms.
+* Users should be able to enter free-text prompts for generating videos.
+* The platform should include guardrails on the content being generated to ensure appropriateness.
 
-**3. Performance Requirements**
+### Video Generation
 
-3.1. The platform should support expected response times of less than 5 seconds for file uploads, text prompt submissions, or video generation processes.
-3.2. The platform should handle errors or exceptions during file uploads, text prompt submissions, or video generation processes gracefully and provide appropriate error messages to users.
+* Based on the academic materials and text prompts, the platform should generate videos that explain the concepts in the materials.
+* The generated videos should be in a format that is easily understandable by the target audience.
 
-**4. User Experience**
+### User Interface
 
-4.1. The platform should provide a user-friendly website layout with easy navigation and clear instructions for each step of the video generation process.
-4.2. The platform should support accessibility features, such as screen reader compatibility, high-contrast mode, and keyboard navigation.
+* The platform should have a user-friendly interface that is easy to navigate.
+* The interface should provide clear instructions on how to use the platform.
 
-**5. Non-Functional Requirements**
+## Non-Functional Requirements
 
-5.1. The platform should use secure communication protocols, such as HTTPS, to protect user data and content during file uploads and video generation processes.
-5.2. The platform should comply with relevant data privacy regulations, such as GDPR or CCPA, and provide clear privacy policies and terms of use.
+### Performance
 
-Please let me know if you have any further questions or clarifications regarding the SRS document.
+* The platform should be able to handle a large number of users and academic materials without performance degradation.
+
+### Security
+
+* The platform should ensure the confidentiality and integrity of user data.
+
+### Accessibility
+
+* The platform should be accessible to users with disabilities.
+
+### Compatibility
+
+* The platform should be compatible with a variety of web browsers and devices.
+
+### Scalability
+
+* The platform should be scalable to accommodate future growth.
+
+### Reliability
+
+* The platform should be reliable and have minimal downtime.
+
+### Maintainability
+
+* The platform should be easy to maintain and update.
+
+### Internationalization
+
+* The platform should support internationalization, allowing for the use of multiple languages.
+
+### Legal and Regulatory Compliance
+
+* The platform should comply with all relevant legal and regulatory requirements, including copyright laws.
