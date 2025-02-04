@@ -1,69 +1,42 @@
-## Introduction
+**Software Requirements Specification (SRS) for Text2Video Platform**
 
-The text2video platform is a web-based application that allows students and teachers to upload academic material and generate videos based on free-text prompts. The platform will support a variety of academic file formats, including PDF, PPT, Word, Docx, and txt. The platform will also include guardrails on the content being generated to ensure that it is appropriate and relevant for academic use.
+**1. Introduction**
 
-## System Features
+The Text2Video platform is a web-based application that allows students and teachers to upload academic material in various formats and generate videos based on free-text prompts. The platform will support PDF, PPT, DOCX, and TXT file formats for academic material uploads and enforce content guardrails for generated videos.
 
-The text2video platform will include the following features:
+**2. Functional Requirements**
 
-### User Management
+2.1. **File Upload**
 
-* Users will be able to create and manage their own accounts, including setting up a profile, managing account settings, and changing passwords.
-* The platform will support multiple user roles, including students and teachers, with different levels of permissions and functionality.
+* The platform should support file uploads in the following formats: PDF, PPT, DOCX, and TXT.
+* The platform should provide an omni uploader that can handle multiple file formats and provide progress indicators during file uploads.
+* The omni uploader should support drag-and-drop functionality.
 
-### Academic Material Upload
+2.2. **Text Prompts**
 
-* Users will be able to upload academic material in a variety of formats, including PDF, PPT, Word, Docx, and txt.
-* The platform will include a robust file uploader that can handle these file types and extract the relevant information for use in the text2video generation process.
+* Users should be able to enter free-text prompts without any specific character limits or constraints.
+* The platform should enforce content guardrails to ensure that generated videos are appropriate, accurate, and adhere to community standards.
 
-### Text Prompts
+2.3. **Video Generation**
 
-* Users will be able to enter free-text prompts to generate videos based on their specific needs and interests.
-* The platform will include a text input field that supports rich text formatting and allows users to enter and edit their prompts.
+* The platform should extract relevant information from uploaded files for video generation.
+* The platform should support different types of content, such as images, tables, and equations.
+* The platform should provide feedback or notifications to users during the video generation process, such as estimated completion times or progress bars.
+* The platform should enforce content guardrails for generated videos, including automated filters, manual review processes, or user reporting mechanisms.
 
-### Text2Video Generation
+**3. Performance Requirements**
 
-* The platform will include a text2video generation engine that can convert text prompts into high-quality videos.
-* The generation engine will use machine learning algorithms and natural language processing techniques to ensure that the generated content is accurate, relevant, and engaging.
+3.1. The platform should support expected response times of less than 5 seconds for file uploads, text prompt submissions, or video generation processes.
+3.2. The platform should handle errors or exceptions during file uploads, text prompt submissions, or video generation processes gracefully and provide appropriate error messages to users.
 
-### Content Moderation
+**4. User Experience**
 
-* The platform will include guardrails on the content being generated to ensure that it is appropriate and relevant for academic use.
-* The platform will include a moderation or review process to ensure that all generated content meets these standards.
+4.1. The platform should provide a user-friendly website layout with easy navigation and clear instructions for each step of the video generation process.
+4.2. The platform should support accessibility features, such as screen reader compatibility, high-contrast mode, and keyboard navigation.
 
-## User Interface
+**5. Non-Functional Requirements**
 
-The text2video platform will include a user-friendly interface that is easy to navigate and use. The platform will be accessible via web browser and will be optimized for desktop and mobile devices.
+5.1. The platform should use secure communication protocols, such as HTTPS, to protect user data and content during file uploads and video generation processes.
+5.2. The platform should comply with relevant data privacy regulations, such as GDPR or CCPA, and provide clear privacy policies and terms of use.
 
-## Technical Requirements
-
-The text2video platform will be built using the following technologies:
-
-* Front-end: React, Redux, HTML5, CSS3, JavaScript
-* Back-end: Node.js, Express.js
-* Database: MongoDB
-* File storage: Amazon S3
-* Machine learning: TensorFlow, Keras
-* Natural language processing: NLTK, spaCy
-
-## Assumptions and Dependencies
-
-The development of the text2video platform will assume the following:
-
-* Users have access to a stable internet connection.
-* Users have a compatible web browser installed on their device.
-* Users have the necessary permissions to upload academic material to the platform.
-* Users agree to the platform's terms of service and content guidelines.
-
-## Acceptance Criteria
-
-The text2video platform will be considered complete when it meets the following criteria:
-
-* Users can create and manage their own accounts.
-* Users can upload academic material in a variety of formats.
-* Users can enter free-text prompts to generate videos.
-* The text2video generation engine can convert text prompts into high-quality videos.
-* The platform includes guardrails on the content being generated.
-* The platform includes a moderation or review process for generated content.
-* The platform includes a user-friendly interface that is easy to navigate and use.
-* The platform meets all technical requirements and dependencies.
+Please let me know if you have any further questions or clarifications regarding the SRS document.
