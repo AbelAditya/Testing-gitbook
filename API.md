@@ -1,88 +1,55 @@
-**API Documentation for Text2Video Platform**
+# REST API Documentation for Text2Video Platform
 
-**1. Introduction**
+## Introduction
 
-The Text2Video platform provides a RESTful API for uploading academic material, submitting text prompts, and generating videos. The API uses JSON as the default data format and supports standard HTTP methods, such as GET, POST, PUT, and DELETE.
+The Text2Video platform provides a REST API for interacting with the platform programmatically. The API uses HTTP requests with JSON payloads for communication.
 
-**2. API Endpoints**
+## API Endpoints
 
-2.1. **File Upload**
+### User Management
 
-* `POST /api/upload`: Uploads a file in PDF, PPT, DOCX, or TXT format and returns a unique identifier for the uploaded file.
+* `POST /users/register`: Register a new user.
+* `POST /users/login`: Log in to the platform.
+* `PUT /users/profile`: Update user profile information.
+* `DELETE /users/profile`: Delete the current user's account.
 
-2.2. **Text Prompts**
+### Academic Material Upload
 
-* `POST /api/prompts`: Submits a free-text prompt and associates it with a previously uploaded file. Returns a unique identifier for the prompt and the associated file.
+* `POST /materials/upload`: Upload a new academic material.
+* `GET /materials/{materialId}`: Retrieve the details of a specific academic material.
+* `PUT /materials/{materialId}`: Update a specific academic material.
+* `DELETE /materials/{materialId}`: Delete a specific academic material.
 
-2.3. **Video Generation**
+### Text Prompt Entry
 
-* `POST /api/generate`: Generates a video based on a previously submitted prompt and returns a unique identifier for the generated video.
-* `GET /api/generate/{videoId}`: Retrieves a previously generated video by its unique identifier.
+* `POST /prompts`: Create a new text prompt.
+* `GET /prompts/{promptId}`: Retrieve the details of a specific text prompt.
+* `PUT /prompts/{promptId}`: Update a specific text prompt.
+* `DELETE /prompts/{promptId}`: Delete a specific text prompt.
 
-**3. API Request and Response Formats**
+### Video Generation
 
-All API requests and responses use JSON as the default data format. Here are some example request and response formats for each endpoint:
+* `POST /videos`: Generate a new video based on an academic material and text prompt.
+* `GET /videos/{videoId}`: Retrieve the details of a specific video.
+* `DELETE /videos/{videoId}`: Delete a specific video.
 
-3.1. **File Upload**
+## Error Handling
 
-Request:
-```json
-{
-  "file": {
-    "name": "example.pdf",
-    "type": "application/pdf",
-    "size": 123456,
-    "data": "JVBERi0xLjQKJcOkw7zDtsOfCjIgMCBvYmoKPDwvTGVuZ3RoIDMgMCBSPj4Kc3RyZWFtCkJUCjAgMCBUZAovRjEgMTIgVGYKKC4uLlR4dC4uLikKRVQKZW5kc3RyZWFtCmVuZG9iagoKMyAwIG9iagozOTAKZW5kb2JqCg=="
-  }
-}
-```
-Response:
-```json
-{
-  "fileId": "12345678-abcd-1234-abcd-1234567890ab"
-}
-```
-3.2. **Text Prompts**
+The API uses HTTP status codes to indicate the success or failure of a request. The following status codes are used:
 
-Request:
-```json
-{
-  "prompt": {
-    "text": "Explain the concept of gravity",
-    "fileId": "12345678-abcd-1234-abcd-1234567890ab"
-  }
-}
-```
-Response:
-```json
-{
-  "promptId": "87654321-abcd-1234-abcd-1234567890ab",
-  "fileId": "12345678-abcd-1234-abcd-1234567890ab"
-}
-```
-3.3. **Video Generation**
+* `200 OK`: The request was successful.
+* `201 Created`: A new resource was created.
+* `204 No Content`: The request was successful, but there is no content to return.
+* `400 Bad Request`: The request was invalid or missing required parameters.
+* `401 Unauthorized`: The user is not authenticated.
+* `403 Forbidden`: The user is not authorized to access the requested resource.
+* `404 Not Found`: The requested resource was not found.
+* `500 Internal Server Error`: An unexpected error occurred on the server.
 
-Request:
-```json
-{
-  "video": {
-    "promptId": "87654321-abcd-1234-abcd-1234567890ab"
-  }
-}
-```
-Response:
-```json
-{
-  "videoId": "45678901-abcd-1234-abcd-1234567890ab"
-}
-```
-4. **Error Handling**
+## Security
 
-The API uses standard HTTP status codes to indicate success or failure. Here are some common error codes and their meanings:
+The API uses JSON Web Tokens (JWT) for authentication and authorization. The `Authorization` header should be included in all API requests, with the format `Bearer {token}`.
 
-* 400 Bad Request: The API request was invalid or contained invalid data.
-* 401 Unauthorized: The API request required authentication but failed to provide valid credentials.
-* 404 Not Found: The requested resource was not found.
-* 500 Internal Server Error: The API encountered an unexpected error.
+## Rate Limiting
 
-Please let me know if you have any further questions or clarifications regarding the API documentation.
+The API may impose rate limits on the number of requests that can be made within a given time period. If a request is rate limited, the API will return a `429 Too Many Requests` status code.
