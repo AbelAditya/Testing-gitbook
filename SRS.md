@@ -37,3 +37,5 @@ This SRS document describes the requirements for a text2video platform for stude
 * Ensuring the accuracy and relevance of the generated videos based on the free-text prompts
 * Handling the various file formats and extracting the relevant information for the video generation process
 * Implementing effective guardrails on the content being generated to ensure that it is appropriate for academic learning
+
+- link to API DOCS [./API.md]
